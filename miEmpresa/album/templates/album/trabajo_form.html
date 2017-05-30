@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block maincontent %}
+<form enctype="multipart/form-data" method="post" action="">
+{% csrf_token %}
+
+{{form.as_p}}
+<button type = <button type="button" class="btn btn-default">Agregar</button>
+<a href ="{% url 'trabajo-list' %}">Cancelar</a>
+
+</form>
+
+{% endblock maincontent %}

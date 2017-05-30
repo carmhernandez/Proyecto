@@ -1,0 +1,221 @@
+   {% extends 'adminlte/base.html' %}
+
+
+{% block title %}Mi Empresa{% endblock %}
+{% block content %}
+
+   <html>
+<header class="main-header">
+  <nav class="navbar navbar-static-top">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="../../index2.html" class="navbar-brand"><b>Empresa</b>Pasto</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Quienes somos <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Politicas de la empresa</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contactenos <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">¿como llegar?</a></li>
+            <li><a href="#">Horarios</a></li>
+            
+           
+            
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+      
+         
+         
+            
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+ 		
+<body>
+<!-- Apply any bg-* class to to the info-box to color it -->
+<div class="info-box bg-blue">
+  <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+  <div class="info-box-content">
+    <span class="info-box-text">Visitas</span>
+    <span class="info-box-number">1</span>
+    <!-- The progress section is optional -->
+    <div class="progress">
+      <div class="progress-bar" style="width: 70%"></div>
+    </div>
+    <span class="progress-description">
+      1% Incremento en 30 Dias
+    </span>
+  </div><!-- /.info-box-content -->
+</div><!-- /.info-box -->
+
+
+{% block logo %}
+<div class="login-logo">
+    <a href="{% block logo_href %}/{% endblock %}">{% block logo_text %}<b>Pagina Principal</b>{% endblock %}</a>
+</div>
+{% endblock %}
+
+
+
+<div class="box">
+  <div class="box-header with-border">
+    <h3 class="box-title">Mi empresa</h3>
+    <div class="box-tools pull-right">
+      <!-- Buttons, labels, and many other things can be placed here! -->
+      <!-- Here is a label for example -->
+      <span class="label label-primary">Conect facebook</span>
+    </div><!-- /.box-tools -->
+  </div><!-- /.box-header -->
+ <li><a href="{% url 'trabajo-create' %}">Agregar Trabajador</a></li>
+
+<li><a href="{% url 'cargo-create' %}">Crear Cargo</a></li>
+</div><!-- /.box -->
+
+	<ul>
+	 
+		
+
+	</ul>
+	<hr>
+	<div>
+		<!-- en esta parte se va a poner el contenido del block section que se carga en las vistas que utilizan este template -->
+		{% block section %}
+		{% endblock section %}
+	</div>
+	<div>
+		<!-- en esta parte se va a poner el contenido del block maincontent que se carga en las vistas que utilizan este template -->
+		{% block maincontent %}
+		{% endblock maincontent %}
+	</div>
+</body>
+</html>
+
+
+
+<hr>
+	<div>
+
+
+
+	<h1>Mi Empresa</h1>
+	
+		<a href="{% url 'trabajo-list' %}">
+				Trabajadores <br>
+			<a href="{% url 'cargo-list' %}">
+				Cargos <br>
+			
+		
+                       
+    </div>  
+
+		
+<hr>
+	
+	
+
+
+
+
+<html>
+
+<div class="box box-danger direct-chat direct-chat-danger">
+  <div class="box-header with-border">
+    <h3 class="box-title">Chat en linea</h3>
+    <div class="box-tools pull-right">
+      <span data-toggle="tooltip" title="3 New Messages" class="badge bg-red">3</span>
+      <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+      <!-- In box-tools add this button if you intend to use the contacts pane -->
+      <button class="btn btn-box-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle"><i class="fa fa-comments"></i></button>
+      <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+    </div>
+  </div><!-- /.box-header -->
+  <div class="box-body">
+    <!-- Conversations are loaded here -->
+    <div class="direct-chat-messages">
+      <!-- Message. Default to the left -->
+      <div class="direct-chat-msg">
+        <div class="direct-chat-info clearfix">
+          <span class="direct-chat-name pull-left">Diego Paredes</span>
+          <span class="direct-chat-timestamp pull-right">20 de marzo 10:19 am</span>
+        </div><!-- /.direct-chat-info -->
+        
+        <div class="direct-chat-text">
+          Reporte enviado
+        </div><!-- /.direct-chat-text -->
+      </div><!-- /.direct-chat-msg -->
+
+      <!-- Message to the right -->
+      <div class="direct-chat-msg right">
+        <div class="direct-chat-info clearfix">
+          <span class="direct-chat-name pull-right">Gerente</span>
+          <span class="direct-chat-timestamp pull-left">20 de marzo 10:30 am</span>
+        </div><!-- /.direct-chat-info -->
+        
+        <div class="direct-chat-text">
+          llego reporte listo!
+        </div><!-- /.direct-chat-text -->
+      </div><!-- /.direct-chat-msg -->
+    </div><!--/.direct-chat-messages-->
+
+    <!-- Contacts are loaded here -->
+    <div class="direct-chat-contacts">
+      <ul class="contacts-list">
+        <li>
+          <a href="#">
+           
+            <div class="contacts-list-info">
+              <span class="contacts-list-name">
+                Cuenta Empresa
+                <small class="contacts-list-date pull-right">20/04/2017</small>
+              </span>
+              <span class="contacts-list-msg">Algun problema...</span>
+              <div class="overlay">
+  					<i class="fa fa-refresh fa-spin"></i>
+			 </div>
+            </div><!-- /.contacts-list-info -->
+          </a>
+        </li><!-- End Contact Item -->
+      </ul><!-- /.contatcts-list -->
+    </div><!-- /.direct-chat-pane -->
+  </div><!-- /.box-body -->
+  <div class="box-footer">
+    <div class="input-group">
+      <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-danger btn-flat">Enviar</button>
+      </span>
+    </div>
+  </div><!-- /.box-footer-->
+</div><!--/.direct-chat -->
+
+</body>
+<!-- Construct the box with style you want. Here we are using box-danger -->
+<!-- Then add the class direct-chat and choose the direct-chat-* contexual class -->
+<!-- The contextual class should match the box, so we are using direct-chat-danger -->
+
+
+</html> 
+</html>
+
+    
+{% endblock %}
+
+

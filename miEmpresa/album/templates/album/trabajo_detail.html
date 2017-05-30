@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block section %}
+	<h2>
+		{{ object.title }}
+
+		
+			{% if object.cargo_id %}
+				( <a href="{% url 'universidad-detail' object.universidad_id %}">{{object.cargo}}</a> )
+		{% endif %}
+	</h2>
+	<a href="{% url 'trabajo-update' object.id %}">Editar</a>
+	<a href="{% url 'trabajo-delete' object.id %}">Eliminar</a​>
+	<hr>
+{% endblock section %}
+
+{% block maincontent %}
+	<div>
+		<div>
+			<img src="{% static object.trabajo.url %}" style="width:550px;height:420px"/>
+		</div >
+	</div>
+{% endblock maincontent %}
